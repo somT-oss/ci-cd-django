@@ -1,0 +1,7 @@
+version: 0.0
+os: linux
+hooks:
+  BeforeInstall:
+      - location: pull_updates/pull_git_changes.sh
+  AfterInstall:
+      - location: server_configs/scripts/after_install.sh
