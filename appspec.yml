@@ -3,5 +3,9 @@ os: linux
 hooks:
   BeforeInstall:
       - location: pull_updates/pull_git_changes.sh
+        timeout: 300
+        runas: ubuntu
   AfterInstall:
       - location: server_configs/scripts/after_install.sh
+        timeout: 300
+        runas: ubuntu
