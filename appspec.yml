@@ -1,11 +1,14 @@
 version: 0.0
 os: linux
+files: 
+  - source: /
+    destination: /home/ubuntu/ci-cd-django
 hooks:
   BeforeInstall:
-      - location: pull_updates/pull_git_changes.sh
+      - location: scripts/pull_git_changes.sh
         timeout: 300
         runas: ubuntu
   AfterInstall:
-      - location: server_configs/scripts/after_install.sh
+      - location: scripts/after_install.sh
         timeout: 300
         runas: ubuntu
