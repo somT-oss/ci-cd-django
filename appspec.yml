@@ -3,6 +3,10 @@ os: linux
 files: 
   - source: /
     destination: /home/ubuntu/ci-cd-django
+permissions:
+  - object: /home/ubuntu/ci-cd-django
+    owner: ubuntu
+    group: ubuntu
 hooks:
   BeforeInstall:
       - location: scripts/clear_instance.sh
@@ -21,3 +25,4 @@ hooks:
       - location: scripts/after_install.sh
         timeout: 300
         runas: ubuntu
+  
