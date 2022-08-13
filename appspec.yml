@@ -19,10 +19,19 @@ hooks:
       - location: scripts/python_dependencies.sh
         timeout: 300
         runas: ubuntu
-      - location: scripts/pull_git_changes.sh
+      - location: scripts/gunicorn.sh
         timeout: 300
         runas: ubuntu
-      - location: scripts/after_install.sh
+      - location: scripts/nginx.sh
         timeout: 300
         runas: ubuntu
+  ApplicationStop:
+      - location: scripts/stop_app.sh
+        timeout: 300
+        runas: ubuntu
+  ApplicationStart:
+      - location: scripts/start_app.sh
+        timeout: 300
+        runas: ubuntu
+  
   
