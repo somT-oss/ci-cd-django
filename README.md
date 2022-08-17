@@ -6,7 +6,7 @@ It contains important scripts needed to carry out both CI and CD operations resp
 
 
 ## CodeBuild
-The script for running builds and tests for your application is located in the **buildspec.yml** file.
+The script for running builds and tests for your application is the **buildspec.yml** file.
 
 ## CodeDeploy 
 The script for running automated deployments to your server is the **appspec.ymL** file. 
